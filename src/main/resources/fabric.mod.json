@@ -5,11 +5,11 @@
 	"name": "${name}",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"Crystal0404"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/Crystal0404",
+		"sources": "https://github.com/Crystal0404/fabric-mod-template-kt"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/template-mod/icon.png",
