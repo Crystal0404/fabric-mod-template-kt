@@ -1,3 +1,8 @@
+/*
+ * fabric-mod-template-kt © 2025 by Crystal0404 and contributors is licensed under CC BY 4.0.
+ * To view a copy of this license, visit https://creativecommons.org/licenses/by/4.0/
+ */
+
 package com.example.templatemod.mixin;
 
 import com.example.templatemod.TemplateMod;

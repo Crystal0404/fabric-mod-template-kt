@@ -11,8 +11,8 @@
 		"homepage": "https://github.com/Crystal0404",
 		"sources": "https://github.com/Crystal0404/fabric-mod-template-kt"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/template-mod/icon.png",
+	"license": "CC-BY-4.0",
+	"icon": "assets/template_mod/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -20,11 +20,11 @@
 		]
 	},
 	"mixins": [
-		"template-mod.mixins.json"
+		"template_mod.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.10",
-		"minecraft": "~1.21.4",
+		"minecraft": "${minecraft_dependency}",
 		"java": ">=21"
 	},
 	"suggests": {
