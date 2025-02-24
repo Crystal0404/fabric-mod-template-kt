@@ -93,6 +93,8 @@ var fullArtifactVersion: String
 //   fullModVersion          1.0.3+build.88             (the actual mod version to use in the mod)
 //   fullProjectVersion      v1.0.3-mc1.15.2+build.88   (in build output jar name)
 //   fullArtifactVersion     1.0.3-mc1.15.2-SNAPSHOT    (maven artifact version)
+
+group = "${project.property("maven_group")}"
 if (System.getenv("JITPACK") == "true") {
     // move mc version into archivesBaseName, so jitpack will be able to organize archives from multiple subprojects correctly
     base.archivesName = "${project.property("archives_base_name")}-mc${project.property("minecraft_version")}"
@@ -103,6 +105,7 @@ if (System.getenv("JITPACK") == "true") {
     fullProjectVersion = "v${project.property("mod_version")}-mc${project.property("minecraft_version")}" + modVersionSuffix
     fullArtifactVersion = artifactVersion + "-mc${project.property("minecraft_version")}" + artifactVersionSuffix
 }
+version = fullProjectVersion
 
 // See https://youtrack.jetbrains.com/issue/IDEA-296490
 // if IDEA complains about "Cannot resolve resource filtering of MatchingCopyAction" and you want to know why
