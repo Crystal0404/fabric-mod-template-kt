@@ -220,6 +220,35 @@ tasks.named("testClasses").configure {
     dependsOn(tasks.named("licenseFormatTest"))
 }
 
+// configure the maven publication
 publishing {
-
+//    publications {
+//        create<MavenPublication>("mavenJava") {
+//            from(components["java"])
+//            artifactId = base.archivesName.get()
+//            version = fullArtifactVersion
+//        }
+//    }
+//
+//    // select the repositories you want to publish to
+//    repositories {
+//        mavenLocal()
+//
+//        maven {
+//            url = uri(
+//                if (fullArtifactVersion.endsWith("SNAPSHOT")) {
+//                    "https://maven.fallenbreath.me/snapshots"
+//                } else {
+//                    "https://maven.fallenbreath.me/releases"
+//                }
+//            )
+//            credentials {
+//                username = "you"
+//                password = System.getenv("FALLENS_MAVEN_TOKEN")
+//            }
+//            authentication {
+//                create<BasicAuthentication>("basic")
+//            }
+//        }
+//    }
 }
