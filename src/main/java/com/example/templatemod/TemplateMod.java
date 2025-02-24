@@ -6,12 +6,14 @@
 package com.example.templatemod;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.loader.api.FabricLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class TemplateMod implements ModInitializer {
     public static final String MOD_NAME = "TemplateMod";
     public static final String MOD_ID = "template_mod";
+    public static String version;
 
     // This logger is used to write text to the console and the log file.
     // It is considered best practice to use your mod id as the logger's name.
@@ -20,6 +22,11 @@ public class TemplateMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        version = FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow().getMetadata().getVersion().getFriendlyString();
+        //# if MC >= 12104
         LOGGER.info("Hello World");
+        //#else
+        //$$ LOGGER.info("Hello Minecraft");
+        //#endif
     }
 }
