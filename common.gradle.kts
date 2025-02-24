@@ -41,6 +41,9 @@ dependencies {
     minecraft("com.mojang:minecraft:${project.property("minecraft_version")}")
     mappings("net.fabricmc:yarn:${project.property("yarn_mappings")}:v2")
     modImplementation("net.fabricmc:fabric-loader:${project.property("loader_version")}")
+
+//    // [FEATURE] MIXIN_AUDITOR
+//    modRuntimeOnly("me.fallenbreath:mixin-auditor:0.1.0")
 }
 
 val javaCompatibility = when {
@@ -69,6 +72,16 @@ loom {
         runDir("../../run")
         vmArgs(commonVmArgs)
     }
+
+//    // [FEATURE] MIXIN_AUDITOR
+//    runs {
+//        val auditVmArgs = listOf(*commonVmArgs.toTypedArray(), "-DmixinAuditor.audit=true")
+//        create("serverMixinAudit") {
+//            server()
+//            vmArgs(auditVmArgs)
+//            ideConfigGenerated(false)
+//        }
+//    }
 }
 
 var modVersionSuffix = ""
