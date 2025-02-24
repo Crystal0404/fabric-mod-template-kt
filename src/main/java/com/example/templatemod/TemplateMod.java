@@ -23,7 +23,7 @@ public class TemplateMod implements ModInitializer {
     @Override
     public void onInitialize() {
         version = FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow().getMetadata().getVersion().getFriendlyString();
-        //# if MC >= 12104
+        //#if MC >= 12104
         LOGGER.info("Hello World");
         //#else
         //$$ LOGGER.info("Hello Minecraft");
